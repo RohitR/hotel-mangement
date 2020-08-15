@@ -14,4 +14,17 @@ describe "Customer" do
   it "should add new customer" do
     expect { create_customer }.to change { Customer.customers.count }.by(1)
   end
+
+  it "should update customer" do
+    customer = Customer.find(1)
+    customer.update({name: 'Jack'})
+    expect(Customer.find(1).name).to eq 'Jack'
+  end
+
+  it "should fail on customer updation" do
+    customer = Customer.find(1)
+    expect{
+      customer.update({mobile_no: '900009'})
+    }.to raise_error("mobile_no is not a valid Customer attribute")
+  end
 end
