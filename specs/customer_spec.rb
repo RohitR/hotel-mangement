@@ -1,6 +1,5 @@
 require 'rspec'
 require './hotel'
-require 'pry'
 
 describe "Customer" do
 
