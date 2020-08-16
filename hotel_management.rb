@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require './executive'
-require './standard_room'
+require './standard'
 require './hotel'
 module HotelManagement
   puts "1. Listing available room"

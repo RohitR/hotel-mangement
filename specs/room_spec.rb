@@ -1,6 +1,8 @@
 require 'rspec'
 require './hotel'
 require './room'
+require './executive'
+require './standard'
 
 describe "Room" do
   before(:each) { HotelManagement::Room.instance_variable_set :@all, [] }
