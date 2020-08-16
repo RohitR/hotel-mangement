@@ -14,7 +14,7 @@ class Customer
     end
 
     def find(id)
-      @customers.detect{|cust| cust.id == id}
+      @customers.detect{|cust| cust.id == id.to_i}
     end
 
   end
